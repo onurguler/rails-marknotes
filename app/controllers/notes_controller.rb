@@ -26,6 +26,8 @@ class NotesController < ApplicationController
 
   def find_note
     @note = Note.find(params[:id])
+    # @note = Note.where(user_id: current_user).find_by_id(params[:id])
+    # raise ActionController::RoutingError.new('Not Found') if @note.blank?
   end
 
   def note_params
