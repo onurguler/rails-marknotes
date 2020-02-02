@@ -1,0 +1,6 @@
+<%= simple_form_for @note do |f| %>
+  <%= f.input :title, input_html: { class: 'mb-4 px-4 py-1 w-full border rounded focus:outline-none' } %>
+  <%= f.input :subtitle, input_html: { class: 'mb-4 px-4 py-1 w-full border rounded focus:outline-none' } %>
+  <%= f.input :content, input_html: { class: 'mb-4 px-4 py-1 w-full border rounded focus:outline-none resize-none', :rows => 14 } %>
+  <%= f.button :submit, :class => 'px-4 py-1 bg-blue-500 text-white font-semibold rounded focus:outline-none' %>
+<% end %>

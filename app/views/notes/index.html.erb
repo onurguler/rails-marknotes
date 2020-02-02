@@ -1,0 +1,12 @@
+<div class="mx-auto p-4 max-w-6xl">
+  <div class="flex flex-col items-center justify-center w-full">
+    <%= link_to "Create Note", new_note_path, class: 'mb-4 max-w-xl w-full bg-blue-500 px-4 py-1 text-white font-semibold text-center rounded hover:bg-blue-600' %>
+    <% @notes.each do |note| %>
+        <div class="mb-4 px-4 py-2 max-w-xl w-full bg-white border rounded-lg shadow-md">
+          <%= link_to note.title, note, class: 'block text-xl font-semibold hover:text-gray-700' %>
+          <%= link_to note.subtitle, note, class: 'block hover:text-gray-700' %>
+          <%= link_to time_ago_in_words(note.created_at), note, class: 'block text-blue-500 text-right hover:text-blue-700' %>
+        </div>
+    <% end %>
+  </div>
+</div>
