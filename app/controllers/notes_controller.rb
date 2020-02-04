@@ -44,7 +44,7 @@ class NotesController < ApplicationController
   private
 
   def find_note
-    @note = current_user.notes.find(params[:id])      
+    @note = current_user.notes.find(params[:id])
     rescue ActiveRecord::RecordNotFound
       redirect_to notes_path
   end
